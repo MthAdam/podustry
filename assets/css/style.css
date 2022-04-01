@@ -1,0 +1,103 @@
+/* common css start */
+:root{
+    --primary-color:#ffca36;
+    --secondery-color:#353535;
+    --light-text:#fff;
+    --linear-slow:all linear .6s;
+    --linear-medium:all linear .4s;
+    --linear-fast:all linear .3s;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+h1,h2,h3,h4,h5,h6,
+p,span,
+ul,li{
+    margin:0;
+    padding:0
+}
+ul,li{
+    list-style-type:none
+}
+a,a:hover{
+    text-decoration:none
+}
+/* common css end// */
+/* top_header css start */
+#top_header{
+ font-size:14px;
+ background:var(--primary-color);
+ box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.75);
+}
+.top_left_header p i{
+    padding-right:5px;
+}
+.top_mid_header{
+    background:var(--secondery-color);
+    text-align:center;
+    color:var(--light-text);
+    padding:10px 0;
+    transform:skew(-40deg)
+}
+.top_mid_header p{
+    transform:skew(40deg)
+}
+.top_right_header{
+}
+.top_right_header ul li{
+    position:relative;
+    margin:0 10px;
+    
+
+}
+.top_right_header ul li:after,
+.top_right_header ul li:before{
+    content:'';
+    position:absolute;
+    background:var(--secondery-color);
+    height:100%;
+    width:1px;
+    top:0;
+    left:0;
+    transform:scale(0);
+    transition:var(--linear-medium);
+}
+.top_right_header ul li:after{
+    left:auto;
+    right:0;
+}
+.top_right_header ul li a{
+    display:block;
+    height:19px;
+    width:19px;
+    text-align:center;
+    line-height:19px;
+    color:var(--secondery-color);
+    position:relative;
+}
+.top_right_header ul li a:after,
+.top_right_header ul li a:before{
+    content:'';
+    position:absolute;
+    height:1px;
+    width:100%;
+    top:0;
+    left:0;
+    background:var(--secondery-color);
+    transform:scale(0);
+    transition:var(--linear-medium)
+}
+.top_right_header ul li a:after{
+    top:auto;
+    bottom:0;
+}
+
+.top_right_header ul li:hover::after,
+.top_right_header ul li:hover::before,
+.top_right_header ul li a:hover::after,
+.top_right_header ul li a:hover::before{
+    transform:scale(1.2)
+}
+/* top_header css end// */
