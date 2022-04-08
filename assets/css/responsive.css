@@ -1,0 +1,21 @@
+@media (min-width:992px){
+    #main_menu ul{
+        opacity:0;
+        visibility:hidden;
+        transition:all .4s ease-in;
+    }
+    #main_menu ul.active{
+        opacity:1;
+        visibility:visible;
+    }
+    nav .logo{
+        position:relative;
+        left:50%;
+        transform:translateX(-50%);
+        transition:all .4s ease-in;
+    }
+    nav .logo.active_logo{
+        left:0;
+        transform:initial;
+    }
+}
